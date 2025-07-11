@@ -22,7 +22,7 @@ export default function PortfolioPage() {
       }, 1000)
     }, 8000)
     return () => clearInterval(interval)
-  }, [])
+  }, [videoRefs, videos.length]) // ✅ Fixed ESLint warning
 
   const galleryImages = [
     { src: '/ts.jpg', title: 'Tech Summit 2025' },
@@ -132,7 +132,7 @@ export default function PortfolioPage() {
 
       {/* Contact Section */}
       <section className="bg-black text-white py-24 px-6 text-center">
-        <h2 className="text-4xl font-bold mb-8">Let’s Work Together 💬</h2>
+        <h2 className="text-4xl font-bold mb-8">Let&apos;s Work Together 💬</h2> {/* ✅ FIXED apostrophe */}
         <p className="max-w-xl mx-auto text-gray-300 mb-6">
           Whether you have a project, a question or just want to say hi, my inbox is always open.
         </p>
