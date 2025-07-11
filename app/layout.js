@@ -1,3 +1,4 @@
+import './globals.css' // ✅ Import Tailwind CSS
 
 export const metadata = {
   title: 'My Single Page',
